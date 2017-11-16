@@ -7,10 +7,7 @@ class Question{
   static CreateTable(){
     return new Promise(function(){
       const sql =
-      `CREATE TABLE questions (
-        id INTEGER PRIMARY KEY,
-        content TEXT
-      )`
+      `CREATE TABLE questions (id INTEGER PRIMARY KEY, content TEXT)`
 
       db.run(sql, function(){
         resolve("questions table created")
