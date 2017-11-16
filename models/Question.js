@@ -13,10 +13,8 @@ class Question{
       )`
 
       db.run(sql, function(){
-        console.log('Question table created!!')
-        resolve('success')
-
-    })
+        resolve("questions table created")
+      })
 
     })
  }
