@@ -10,7 +10,7 @@ class Question{
       `CREATE TABLE questions (
         id INTEGER PRIMARY KEY,
         content TEXT
-      )``
+      )`
 
       db.run(sql, function(){
         console.log('Question table created!!')
