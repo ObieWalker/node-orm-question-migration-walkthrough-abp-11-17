@@ -3,23 +3,14 @@
 const db = require("../config/db")
 
 class Question{
-
-  static CreateTable(){
-    return new Promise(function(){
-      const sql =
-      CREATE TABLE questions (
-        id INTEGER PRIMARY KEY,
-        content TEXT
-      )
-
+  static CreateTable() {
+    return new Promise(function(resolve){
+      const sql = `CREATE TABLE questions (id INTEGER PRIMARY KEY)`
       db.run(sql, function(){
-        console.log('Question table created!!')
-        resolve('success')
-
+        resolve("questions table created")
+      })      
     })
-
-    })
- }
+  }
 }
 
 
